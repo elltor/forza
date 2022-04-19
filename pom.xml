@@ -25,7 +25,7 @@
         <java.version>1.8</java.version>
         <project.encoding>UTF-8</project.encoding>
         <maven.compiler.plugin>3.5.1</maven.compiler.plugin>
-        <maven.flatten.plugin>1.2.2</maven.flatten.plugin>
+        <flatten.maven.plugin>1.2.2</flatten.maven.plugin>
         <springboot.version>2.2.6.RELEASE</springboot.version>
         <hessian.version>3.2.3</hessian.version>
     </properties>
@@ -96,7 +96,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>flatten-maven-plugin</artifactId>
-                <version>${maven.flatten.plugin}</version>
+                <version>${flatten.maven.plugin}</version>
                 <configuration>
                     <!-- 是否更新pom文件，此处还有更高级的用法 -->
                     <updatePomFile>false</updatePomFile>
@@ -121,5 +121,12 @@
             </plugin>
         </plugins>
     </build>
+
+    <licenses>
+        <license>
+            <name>Apache Software License</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
 
 </project>
