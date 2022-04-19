@@ -2,22 +2,42 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
-    <parent>
-        <artifactId>forza-root</artifactId>
-        <groupId>org.forza</groupId>
-        <version>1.0.0</version>
-    </parent>
-
     <modelVersion>4.0.0</modelVersion>
 
-    <modules>
-        <module>forza-sample-client</module>
-        <module>forza-sample-server</module>
-        <module>forza-sample-api</module>
-    </modules>
+    <parent>
+        <groupId>org.forza</groupId>
+        <artifactId>forza-root</artifactId>
+        <version>${revision}</version>
+    </parent>
 
     <artifactId>forza-example</artifactId>
+    <version>${revision}</version>
     <packaging>pom</packaging>
+
+    <modules>
+        <module>forza-sample-api</module>
+        <module>forza-sample-client</module>
+        <module>forza-sample-server</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.forza</groupId>
+                <artifactId>forza-sample-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.forza</groupId>
+                <artifactId>forza-sample-server</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.forza</groupId>
+                <artifactId>forza-sample-client</artifactId>
+                <version>${revision}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>

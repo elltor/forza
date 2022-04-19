@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.forza</groupId>
         <artifactId>forza-root</artifactId>
-        <version>1.0.0</version>
+        <version>${revision}</version>
     </parent>
 
     <artifactId>forza-extension</artifactId>

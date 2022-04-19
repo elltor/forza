@@ -6,8 +6,12 @@
 
     <groupId>org.forza</groupId>
     <artifactId>forza-root</artifactId>
+    <version>${revision}</version>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
+
+    <!-- extra info -->
+    <name>${project.artifactId}</name>
+    <description>${project.artifactId}</description>
 
     <modules>
         <module>forza-extension</module>
@@ -15,24 +19,40 @@
         <module>forza-example</module>
     </modules>
 
+    <properties>
+        <!-- global version -->
+        <revision>1.0.0-SNAPSHOT</revision>
+        <java.version>1.8</java.version>
+        <project.encoding>UTF-8</project.encoding>
+        <maven.compiler.plugin>3.5.1</maven.compiler.plugin>
+        <maven.flatten.plugin>1.2.2</maven.flatten.plugin>
+        <springboot.version>2.2.6.RELEASE</springboot.version>
+        <hessian.version>3.2.3</hessian.version>
+    </properties>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.2.6.RELEASE</version>
+                <version>${springboot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <!-- inner dependencies -->
+            <dependency>
+                <groupId>org.forza</groupId>
+                <artifactId>forza-extension</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.forza</groupId>
+                <artifactId>forza-spring-boot-starter</artifactId>
+                <version>${revision}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
-    <properties>
-        <java.version>1.8</java.version>
-        <maven.compiler.plugin>3.5.1</maven.compiler.plugin>
-        <project.encoding>UTF-8</project.encoding>
-        <hessian.version>3.2.3</hessian.version>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -71,6 +91,35 @@
                     <encoding>${project.encoding}</encoding>
                 </configuration>
             </plugin>
+
+            <!-- reversion 插件 -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>${maven.flatten.plugin}</version>
+                <configuration>
+                    <!-- 是否更新pom文件，此处还有更高级的用法 -->
+                    <updatePomFile>false</updatePomFile>
+                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
+
 </project>
