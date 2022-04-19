@@ -1,0 +1,2 @@
+generalReq=org.forza.protocol.handler.GeneralCmdHandler
+heartbeat=org.forza.protocol.handler.HeartbeatHandler

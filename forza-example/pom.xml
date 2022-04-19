@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <artifactId>forza-root</artifactId>
+        <groupId>org.forza</groupId>
+        <version>1.0.0</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <modules>
+        <module>forza-sample-client</module>
+        <module>forza-sample-server</module>
+        <module>forza-sample-api</module>
+    </modules>
+
+    <artifactId>forza-example</artifactId>
+    <packaging>pom</packaging>
+
+</project>
