@@ -1,1 +1,2 @@
 simple=org.forza.sample.processor.SimpleUerProcessor
+queryGoods=org.forza.sample.processor.QuerySpecialGoodsProcessor

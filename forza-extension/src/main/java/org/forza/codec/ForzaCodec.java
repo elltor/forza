@@ -200,9 +200,9 @@ public class ForzaCodec extends AbstractCodec {
         } catch (IOException e) {
             throw new DecoderException("encode response failed !");
         }
-
     }
 
+    // TODO fix
     private void encodeRequst(Connection con, RequestCommand req, ChannelBuffer buffer) throws EncoderException {
         try {
             Serialization serialization = SerializationManager.getSerialization(con.getUrl());

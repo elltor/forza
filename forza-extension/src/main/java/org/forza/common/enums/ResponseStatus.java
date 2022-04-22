@@ -26,7 +26,7 @@ import lombok.AllArgsConstructor;
  */
 @AllArgsConstructor
 public enum ResponseStatus {
-
+    /** 0x65 */
     SUCCESS((byte) 101),
     SERVER_EXCEPTION((byte) 102),
     SERVER_THREADPOOL_BUSY((byte) 103),

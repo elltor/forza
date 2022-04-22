@@ -122,7 +122,7 @@ public void call_back()throws Exception{
 
 - 单向调用
 
-```
+```java
 @Test
     public void oneway_test() throws Exception {
         Map<String, Object> map = new HashMap<String, Object>();

@@ -43,6 +43,7 @@ public abstract class AbstractClient<K, P extends ChannelPool>
         implements Client, ChannelPoolMap<K, P>, Iterable<Map.Entry<K, P>>, Closeable {
 
     private static final Logger logger = LoggerFactory.getLogger(AbstractServer.class);
+
     protected ReconnectClient reconnectClient;
     private final ConcurrentMap<K, P> map = PlatformDependent.newConcurrentHashMap();
     private CommandFactory commandFactory;
@@ -227,6 +228,9 @@ public abstract class AbstractClient<K, P extends ChannelPool>
     @Override
     public <T> T request(Url url, Object msg) throws RemotingException {
         init(url);
+        if (logger.isInfoEnabled()) {
+            logger.info("request url: {}", url);
+        }
         Connection connection = ctreateConnectionIfAbsent(url);
         RequestCommand request = commandFactory.createRequest(msg);
         if (UrlUtils.isOneway(url)) {

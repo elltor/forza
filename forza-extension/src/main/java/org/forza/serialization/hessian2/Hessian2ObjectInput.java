@@ -86,8 +86,7 @@ public class Hessian2ObjectInput implements ObjectInput {
 
     @Override
     @SuppressWarnings("unchecked")
-    public <T> T readObject(Class<T> cls) throws IOException,
-            ClassNotFoundException {
+    public <T> T readObject(Class<T> cls) throws IOException, ClassNotFoundException {
         return (T) mH2i.readObject(cls);
     }
 

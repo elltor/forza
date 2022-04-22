@@ -134,7 +134,9 @@ public class ExtensionLoader<T> {
         return holder;
     }
 
-    private void loadFromClassLoader(Map<String, Class<?>> extensionClasses, ClassLoader classLoader, String fileName) throws Throwable {
+    private void loadFromClassLoader(Map<String, Class<?>> extensionClasses, ClassLoader classLoader, String fileName)
+            throws Throwable {
+
         Enumeration<URL> urls = classLoader != null ? classLoader.getResources(fileName)
                 : ClassLoader.getSystemResources(fileName);
         if (urls != null) {
@@ -203,11 +205,14 @@ public class ExtensionLoader<T> {
     public Set<String> getSupportedExtensions() {
         Map<String, Class<?>> clazzes = getExtensionClasses();
         if (logger.isInfoEnabled()) {
+            StringBuilder sb = new StringBuilder(1024);
+            sb.append("\n-------------------\n");
             for (String key : clazzes.keySet()) {
-                logger.debug("Supported Extension, key = {}", key);
+                sb.append("extension key = " + key).append('\n');
             }
+            sb.append("-------------------");
+            logger.info(sb.toString());
         }
         return Collections.unmodifiableSet(new TreeSet<String>(clazzes.keySet()));
     }
-
 }
