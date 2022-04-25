@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.forza.transport.ForzaClient</OriginalElement>
+  <nodes>
+    <node x="582.0" y="240.0">org.forza.transport.AbstractEndpoint</node>
+    <node x="416.1968085106383" y="158.0">org.forza.transport.Endpoint</node>
+    <node x="-1.3031914893617227" y="9.0">java.lang.AutoCloseable</node>
+    <node x="275.69680851063833" y="240.0">java.lang.Iterable</node>
+    <node x="743.1968085106382" y="78.0">org.forza.reomoting.LifeCycle</node>
+    <node x="16.696808510638277" y="78.0">java.io.Closeable</node>
+    <node x="712.1968085106382" y="158.0">org.forza.reomoting.AbstractLifeCycle</node>
+    <node x="6.696808510638277" y="158.0">io.netty.channel.pool.ChannelPool</node>
+    <node x="428.19680851063833" y="240.0">org.forza.transport.Client</node>
+    <node x="37.19680851063828" y="240.0">io.netty.channel.pool.ChannelPoolMap</node>
+    <node x="232.19680851063828" y="381.0">org.forza.transport.ForzaClient</node>
+    <node x="550.1968085106382" y="158.0">org.forza.config.Configurable</node>
+    <node x="196.19680851063828" y="320.0">org.forza.transport.AbstractClient</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.forza.transport.ForzaClient" target="org.forza.transport.AbstractClient" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="java.io.Closeable" target="java.lang.AutoCloseable" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="org.forza.transport.AbstractClient" target="io.netty.channel.pool.ChannelPool" relationship="DEPENDENCY">
+      <point x="-80.69680851063828" y="-14.0" />
+      <point x="216.0" y="294.0" />
+      <point x="25.0" y="294.0" />
+      <point x="-51.19680851063828" y="14.0" />
+    </edge>
+    <edge source="org.forza.transport.AbstractEndpoint" target="org.forza.transport.Endpoint" relationship="REALIZATION">
+      <point x="-9.0" y="-13.0" />
+      <point x="661.0" y="218.5" />
+      <point x="488.1968085106383" y="218.5" />
+      <point x="15.0" y="14.0" />
+    </edge>
+    <edge source="org.forza.transport.AbstractEndpoint" target="org.forza.reomoting.AbstractLifeCycle" relationship="GENERALIZATION">
+      <point x="39.0" y="-11.0" />
+      <point x="709.0" y="219.5" />
+      <point x="750.5" y="219.5" />
+      <point x="-49.19680851063822" y="14.0" />
+    </edge>
+    <edge source="org.forza.transport.AbstractEndpoint" target="org.forza.config.Configurable" relationship="REALIZATION">
+      <point x="15.0" y="-14.0" />
+      <point x="63.80319148936178" y="14.0" />
+    </edge>
+    <edge source="org.forza.transport.Client" target="org.forza.transport.Endpoint" relationship="INTERFACE_GENERALIZATION">
+      <point x="-0.19680851063833416" y="-12.0" />
+      <point x="473.0" y="213.0" />
+      <point x="473.1968085106383" y="213.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="org.forza.transport.AbstractClient" target="java.lang.Iterable" relationship="REALIZATION">
+      <point x="43.30319148936172" y="-14.0" />
+      <point x="340.0" y="301.0" />
+      <point x="339.0" y="301.0" />
+      <point x="-4.196808510638334" y="13.0" />
+    </edge>
+    <edge source="org.forza.transport.AbstractClient" target="org.forza.transport.AbstractEndpoint" relationship="GENERALIZATION">
+      <point x="101.30319148936172" y="-1.0" />
+      <point x="670.0" y="333.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="org.forza.reomoting.AbstractLifeCycle" target="org.forza.reomoting.LifeCycle" relationship="REALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="org.forza.transport.AbstractClient" target="java.io.Closeable" relationship="REALIZATION">
+      <point x="-100.5" y="0.0" />
+      <point x="-17.5" y="334.0" />
+      <point x="-17.5" y="93.0" />
+      <point x="-59.19680851063828" y="1.0" />
+    </edge>
+    <edge source="org.forza.transport.AbstractClient" target="org.forza.transport.Client" relationship="REALIZATION">
+      <point x="73.30319148936172" y="-16.0" />
+      <point x="370.0" y="294.0" />
+      <point x="473.19680851063833" y="294.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="io.netty.channel.pool.ChannelPool" target="java.io.Closeable" relationship="INTERFACE_GENERALIZATION">
+      <point x="47.80319148936172" y="-4.0" />
+      <point x="76.19680851063828" y="168.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="io.netty.channel.pool.ChannelPoolMap" target="io.netty.channel.pool.ChannelPool" relationship="DEPENDENCY">
+      <point x="-42.69680851063828" y="-9.0" />
+      <point x="107.0" y="245.0" />
+      <point x="107.0" y="214.5" />
+      <point x="30.803191489361723" y="15.0" />
+    </edge>
+    <edge source="org.forza.transport.AbstractClient" target="io.netty.channel.pool.ChannelPoolMap" relationship="REALIZATION">
+      <point x="-64.69680851063828" y="-14.0" />
+      <point x="237.0" y="320.0" />
+      <point x="237.0" y="294.0" />
+      <point x="89.30319148936172" y="17.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="435.0" y="213.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

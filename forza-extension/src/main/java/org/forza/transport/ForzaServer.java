@@ -46,18 +46,23 @@ public class ForzaServer extends AbstractServer<ForzaServer> {
     @Override
     public void doOpen() throws Throwable {
         bootstrap = new ServerBootstrap();
+        // accept worker
         bossGroup = new NioEventLoopGroup(1, new DefaultThreadFactory("BoltServerBoss", false));
+        // read/write worker
         workerGroup = new NioEventLoopGroup(this.option(ForzaGenericOption.IO_THREADS),
                 new DefaultThreadFactory("BoltServerWorker", true));
         port = this.option(ForzaServerOption.PORT);
         init(new Url(NetUtils.getLocalHost(), port));
+        // 创建handler
         final ForzaHandler serverHandler = new ForzaHandler(getUrl(), getProtocol(), isServerSide());
         int idleTimeout = UrlUtils.getIdleTimeout(getUrl());
+        // 添加handler监听
         serverHandler.setConnectionEventListener(getConnectionEventListener());
 
-
+        // 配置Netty
         bootstrap.group(bossGroup, workerGroup)
                 .channel(NioServerSocketChannel.class)
+                // TCP参数配置
                 .childOption(ChannelOption.TCP_NODELAY, this.option(ForzaGenericOption.TCP_NODELAY))
                 .childOption(ChannelOption.SO_REUSEADDR, this.option(ForzaGenericOption.TCP_SO_REUSEADDR))
                 .childOption(ChannelOption.ALLOCATOR, PooledByteBufAllocator.DEFAULT)
@@ -75,6 +80,7 @@ public class ForzaServer extends AbstractServer<ForzaServer> {
                                 .addLast(serverHandler);
                     }
                 });
+        // 启动server并阻塞
         ChannelFuture future = bootstrap.bind(this.port).syncUninterruptibly();
         channel = future.channel();
     }

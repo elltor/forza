@@ -11,13 +11,18 @@
     </parent>
 
     <artifactId>forza-example</artifactId>
-    <version>${revision}</version>
+<!--    <version>${revision}</version>-->
     <packaging>pom</packaging>
+
+    <properties>
+        <jmh.version>1.28</jmh.version>
+    </properties>
 
     <modules>
         <module>forza-sample-api</module>
         <module>forza-sample-client</module>
         <module>forza-sample-server</module>
+        <module>forza-sample-benchmark</module>
     </modules>
 
     <dependencyManagement>
@@ -27,15 +32,30 @@
                 <artifactId>forza-sample-api</artifactId>
                 <version>${revision}</version>
             </dependency>
+
             <dependency>
                 <groupId>org.forza</groupId>
                 <artifactId>forza-sample-server</artifactId>
                 <version>${revision}</version>
             </dependency>
+
             <dependency>
                 <groupId>org.forza</groupId>
                 <artifactId>forza-sample-client</artifactId>
                 <version>${revision}</version>
+            </dependency>
+
+            <!-- JMH 基准测试 -->
+            <dependency>
+                <groupId>org.openjdk.jmh</groupId>
+                <artifactId>jmh-core</artifactId>
+                <version>${jmh.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openjdk.jmh</groupId>
+                <artifactId>jmh-generator-annprocess</artifactId>
+                <version>${jmh.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

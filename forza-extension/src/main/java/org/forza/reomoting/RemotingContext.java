@@ -15,6 +15,7 @@ import java.util.concurrent.Future;
  * @Description: TODO
  */
 public class RemotingContext {
+
     private static final FastThreadLocal<RemotingContext> LOCAL = new FastThreadLocal<RemotingContext>() {
         @Override
         protected RemotingContext initialValue() {

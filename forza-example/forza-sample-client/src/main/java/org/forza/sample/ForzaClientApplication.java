@@ -6,6 +6,7 @@ import org.forza.transport.Client;
 import com.forza.sample.api.SimpleRequestBody;
 import com.forza.sample.api.SimpleResponseBody;
 import org.forza.autoconfigure.EnableForza;
+import org.openjdk.jmh.annotations.Benchmark;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;

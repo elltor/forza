@@ -22,7 +22,7 @@ public class QuerySpecialGoodsProcessor extends AbstractUserProcessorAdapter<Goo
         for (; start <= end; start++) {
             goodsList.add(new Goods(start, "XXX-" + start, category));
         }
-        TimeUnit.SECONDS.sleep(10);
+//        TimeUnit.SECONDS.sleep(10);
         return new GoodsResponseBody(goodsList);
     }
 }

@@ -49,10 +49,9 @@ boolean handelInIOThread()
 }
 
 abstract class AbstractCommandHandler{
-handle(RemotingContext ctx, T command)
-abstract handleRequest(RequestCommand request)
-abstract handleResponse(ResponseCommand response)
-
+    handle(RemotingContext ctx, T command)
+    abstract handleRequest(RequestCommand request)
+    abstract handleResponse(ResponseCommand response)
 }
 
 

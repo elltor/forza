@@ -1,0 +1,38 @@
+@startuml
+/'调用图'/
+autoactivate on
+actor Actor
+
+Actor -> ForzaServer : 1）调用 doOpen 开始初始化
+
+    ForzaServer -> AbstractEndpoint : 2）调用 option \n     获取参数
+        activate ForzaServer
+        AbstractEndpoint -> ForzaOptions : 3）读取配置文件参数
+            ForzaOptions -> ForzaOption : 获取配置
+            return
+        return
+
+    return
+    deactivate ForzaServer
+
+    ForzaServer -> AbstractEndpoint : 4）调用init方法进行初始化
+        activate ForzaServer
+        |||
+        AbstractEndpoint -> ForzaOption : 获取配置
+        return
+    return
+    deactivate ForzaServer
+
+    ForzaServer -> AbstractEndpoint : 5）调用initWriteBufferWaterMark
+        activate ForzaServer
+        |||
+        AbstractEndpoint -> ForzaOption : 获取配置
+        return
+    return
+    deactivate ForzaServer
+
+    ForzaServer -> ChannelInitializer : 6）调用initChannel初始化\n     Netty服务器
+    |||
+    return
+return
+@enduml

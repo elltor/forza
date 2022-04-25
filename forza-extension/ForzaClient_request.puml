@@ -1,0 +1,36 @@
+@startuml
+/' ForzaClient 请求过程'/
+
+autoactivate on
+
+actor Actor
+
+
+Actor -> Client: 1) 调用 request\n 进行请求
+    Client -> AbstractClient: 2) 调用 Request\n 进行请求
+        AbstractClient -> AbstractEndpoint: 3) 获取配置信息
+            AbstractEndpoint -> ForzaOptions: option
+            return
+        return
+        AbstractClient -> AbstractClient :4) 调用 request 进行请求
+            AbstractClient -> AbstractEndpoint: 5) 调用 init 方法初始花Client的参数
+                AbstractEndpoint -> ForzaOptions: option
+                return
+            return
+            AbstractClient -> ForzaClient: 6) 调用 ctreateConnectionIfAbsent 保存与服务器的链接
+                AbstractClient <- ForzaClient: 7) 调用 newPool 方法创建线程池
+                    ForzaClient -> Connection: 8) 调用 getOrAddConnection 获取链接
+                    return
+                return
+            return
+            AbstractClient -> AbstractConnectionHandler: 9) 调用 send 方法进行发送
+                AbstractConnectionHandler -> AbstractConnectionHandler: 10) 执行 writeAndFlush \n方法写出数据
+                return
+            return
+        return
+    return
+
+return 完成
+
+
+@enduml
