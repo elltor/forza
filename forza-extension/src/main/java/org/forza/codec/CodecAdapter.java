@@ -12,11 +12,7 @@ import org.forza.reomoting.Connection;
 
 import java.util.List;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/5
- * @Description: TODO
- */
+
 public final class CodecAdapter {
     private final Codec codec;
     @Getter

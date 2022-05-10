@@ -3,11 +3,6 @@ package org.forza.config;
 
 import java.util.Objects;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/9
- * @Description: TODO
- */
 public class ForzaOption<T> {
     private final String name;
     private T defaultValue;

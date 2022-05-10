@@ -10,11 +10,6 @@ import java.net.InetSocketAddress;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/7
- * @Description: TODO
- */
 @RunWith(JUnit4.class)
 public class UrlTest {
 

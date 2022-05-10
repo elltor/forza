@@ -1,10 +1,5 @@
 package org.forza.common;
 
-/**
- * @Author:  
- * @DateTime: 2020/3/25
- * @Description: TODO
- */
 public class Holder<T> {
     private volatile T value;
 

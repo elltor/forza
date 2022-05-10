@@ -18,11 +18,6 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/19
- * @Description: TODO
- */
 public class GeneralCmdHandler extends AbstractCommandHandler {
     private ConcurrentHashMap<String, UserProcessor<?>> processors = new ConcurrentHashMap<String, UserProcessor<?>>(4);
 

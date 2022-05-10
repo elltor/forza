@@ -1,14 +1,7 @@
 package org.forza.common.command;
 
-import lombok.Data;
 import org.forza.common.enums.ResponseStatus;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/6
- * @Description: TODO
- */
-@Data
 public class ResponseCommand extends AbstractCommand {
     private ResponseStatus status;
     private String errorMessage;
@@ -19,6 +12,23 @@ public class ResponseCommand extends AbstractCommand {
 
     public ResponseCommand(int id, CommandCode cmdCode) {
         super(id, cmdCode);
+    }
+
+
+    public ResponseStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(ResponseStatus status) {
+        this.status = status;
+    }
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
     }
 
     @Override

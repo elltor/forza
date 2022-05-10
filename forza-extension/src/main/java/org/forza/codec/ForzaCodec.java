@@ -27,11 +27,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/5
- * @Description: TODO
- */
+
 public class ForzaCodec extends AbstractCodec {
     private static final Logger logger = LoggerFactory.getLogger(ForzaCodec.class);
     protected static final int HEADER_LENGTH = 14;

@@ -6,11 +6,6 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.CharsetUtil;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/15
- * @Description: TODO
- */
 @ChannelHandler.Sharable
 public class SimpleHandler extends ChannelInboundHandlerAdapter {
 

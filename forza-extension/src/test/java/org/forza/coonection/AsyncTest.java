@@ -13,11 +13,6 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/15
- * @Description: TODO
- */
 @RunWith(JUnit4.class)
 public class AsyncTest {
 

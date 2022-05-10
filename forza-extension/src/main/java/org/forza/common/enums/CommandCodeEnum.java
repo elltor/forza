@@ -1,20 +1,17 @@
 package org.forza.common.enums;
 
-import lombok.AllArgsConstructor;
 import org.forza.common.command.CommandCode;
 
-/**
- * @Author:  
- * @DateTime: 2020/3/30
- * @Description: TODO
- */
-@AllArgsConstructor
 public enum CommandCodeEnum implements CommandCode {
     GENERAL_CMD((short) 0),
     HEARTBEAT_CMD((short) 1);
 
 
     private short value;
+
+    CommandCodeEnum(short value) {
+        this.value = value;
+    }
 
     @Override
     public short getValue() {

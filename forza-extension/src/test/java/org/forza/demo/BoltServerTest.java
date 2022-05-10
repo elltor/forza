@@ -4,11 +4,6 @@ import org.forza.common.enums.ConnectionEventType;
 import org.forza.config.ForzaServerOption;
 import org.forza.transport.ForzaServer;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/18
- * @Description: TODO
- */
 public class BoltServerTest {
     public static void main(String[] args) {
         ForzaServer server = new ForzaServer();

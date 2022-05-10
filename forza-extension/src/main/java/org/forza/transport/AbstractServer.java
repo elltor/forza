@@ -12,10 +12,6 @@ import java.net.InetSocketAddress;
 
 /**
  * 抽象服务器端类
- *
- * @Author:  
- * @DateTime: 2020/4/21
- * @Description: TODO
  */
 public abstract class AbstractServer<T extends AbstractServer> extends AbstractEndpoint implements Server {
 

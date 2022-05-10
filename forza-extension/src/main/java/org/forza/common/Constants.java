@@ -2,11 +2,6 @@ package org.forza.common;
 
 import org.forza.common.enums.ConnectionTimeoutAction;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/6
- * @Description: TODO
- */
 public class Constants {
     public static final String PAYLOAD_KEY = "payload";
     public static final int DEFAULT_PAYLOAD = 8 * 1024 * 1024;                      // 8M

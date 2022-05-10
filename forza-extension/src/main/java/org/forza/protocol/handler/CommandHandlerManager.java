@@ -9,11 +9,6 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/4
- * @Description: TODO
- */
 public class CommandHandlerManager {
     private static final Logger logger = LoggerFactory.getLogger(CommandHandlerManager.class);
     private static final ConcurrentHashMap<CommandCode, CommandHandler<?>> CMD_HANDLER_MAP = new ConcurrentHashMap(4);

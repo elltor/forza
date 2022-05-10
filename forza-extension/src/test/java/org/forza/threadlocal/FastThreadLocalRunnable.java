@@ -3,11 +3,6 @@ package org.forza.threadlocal;
 import org.forza.util.ObjectUtils;
 import io.netty.util.concurrent.FastThreadLocal;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/27
- * @Description: TODO
- */
 public class FastThreadLocalRunnable implements Runnable {
     private Runnable runnable;
 

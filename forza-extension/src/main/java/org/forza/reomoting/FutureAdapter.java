@@ -8,11 +8,6 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/28
- * @Description: TODO
- */
 public class FutureAdapter<V> extends CompletableFuture<V> {
 
     private final ResponseFuture future;

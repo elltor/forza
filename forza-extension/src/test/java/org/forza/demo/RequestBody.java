@@ -4,11 +4,6 @@ import lombok.Data;
 
 import java.io.Serializable;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/18
- * @Description: TODO
- */
 @Data
 public class RequestBody implements Serializable {
 

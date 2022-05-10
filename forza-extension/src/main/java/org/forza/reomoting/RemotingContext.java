@@ -9,11 +9,6 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/20
- * @Description: TODO
- */
 public class RemotingContext {
 
     private static final FastThreadLocal<RemotingContext> LOCAL = new FastThreadLocal<RemotingContext>() {

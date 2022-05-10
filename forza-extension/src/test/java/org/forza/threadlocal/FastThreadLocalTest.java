@@ -8,9 +8,6 @@ import org.junit.runners.JUnit4;
 
 import java.util.concurrent.*;
 
-/**
- *
- */
 @RunWith(JUnit4.class)
 public class FastThreadLocalTest {
     private static final Executor executor = Executors.newFixedThreadPool(3);

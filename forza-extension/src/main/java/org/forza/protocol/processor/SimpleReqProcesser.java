@@ -4,12 +4,6 @@ import org.forza.protocol.ReqBody;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
-/**
- * @Author:  
- * @DateTime: 2020/4/20
- * @Description: TODO
- */
 public class SimpleReqProcesser extends AbstractUserProcessorAdapter<ReqBody> {
     private Logger logger = LoggerFactory.getLogger(getClass());
 

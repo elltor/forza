@@ -5,11 +5,6 @@ import org.forza.common.extension.Extension;
 
 import java.util.concurrent.ExecutorService;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/19
- * @Description: TODO
- */
 @Extension
 public interface UserProcessor<T> {
 

@@ -33,11 +33,6 @@ import java.util.concurrent.ConcurrentMap;
 
 import static io.netty.util.internal.ObjectUtil.checkNotNull;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/22
- * @Description: TODO
- */
 public abstract class AbstractClient<K, P extends ChannelPool>
         extends AbstractEndpoint
         implements Client, ChannelPoolMap<K, P>, Iterable<Map.Entry<K, P>>, Closeable {

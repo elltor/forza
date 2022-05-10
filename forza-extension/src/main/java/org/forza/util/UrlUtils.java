@@ -7,11 +7,6 @@ import org.forza.common.Url;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/7
- * @Description: TODO
- */
 public class UrlUtils {
 
     private final static String URL_COLON_SYMBOL = ":";

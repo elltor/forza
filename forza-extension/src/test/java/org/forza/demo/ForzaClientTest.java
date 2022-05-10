@@ -16,11 +16,6 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CountDownLatch;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/10
- * @Description: TODO
- */
 @RunWith(JUnit4.class)
 public class ForzaClientTest {
     private static final Logger logger = LoggerFactory.getLogger(ForzaClientTest.class);

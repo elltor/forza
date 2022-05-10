@@ -2,11 +2,6 @@ package org.forza.reomoting;
 
 import org.forza.common.exception.RemotingException;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/24
- * @Description: TODO
- */
 public interface ResponseFuture {
 
     /**

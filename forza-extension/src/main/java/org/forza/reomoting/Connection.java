@@ -15,9 +15,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-/**
- * 代表一个连接
- */
 public final class Connection extends AbstractConnectionHandler {
     private static final Logger logger = LoggerFactory.getLogger(Connection.class);
 

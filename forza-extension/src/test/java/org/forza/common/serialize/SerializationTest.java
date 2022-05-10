@@ -12,11 +12,6 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.Serializable;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/24
- * @Description: TODO
- */
 @RunWith(JUnit4.class)
 public class SerializationTest {
     ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();

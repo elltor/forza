@@ -19,9 +19,6 @@ package org.forza.common.buffer;
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * UnsafeByteArrayInputStream.
- */
 public class UnsafeByteArrayInputStream extends InputStream {
     protected byte mData[];
 

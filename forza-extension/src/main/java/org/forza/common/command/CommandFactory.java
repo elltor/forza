@@ -5,11 +5,6 @@ import org.forza.common.enums.CommandCodeEnum;
 import org.forza.common.enums.ResponseStatus;
 
 
-/**
- * @Author:  
- * @DateTime: 2020/4/11
- * @Description: TODO
- */
 public class CommandFactory {
 
     public RequestCommand createRequest(Object request) {

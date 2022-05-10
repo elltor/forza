@@ -4,11 +4,6 @@ package org.forza.common.buffer;
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/6
- * @Description: TODO
- */
 public class ChannelBufferInputStream extends InputStream {
     private final ChannelBuffer buffer;
     private final int startIndex;

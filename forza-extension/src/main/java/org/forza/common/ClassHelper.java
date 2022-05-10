@@ -1,10 +1,5 @@
 package org.forza.common;
 
-/**
- * @Author:  
- * @DateTime: 2020/3/26
- * @Description: TODO
- */
 public class ClassHelper {
     /**
      * @param clazz

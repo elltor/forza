@@ -5,11 +5,6 @@ import org.springframework.lang.Nullable;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/20
- * @Description: TODO
- */
 public class ObjectUtils {
 
     public static void isNotNull(@Nullable Object object, String message) {

@@ -6,11 +6,6 @@ import lombok.ToString;
 
 import java.io.Serializable;
 
-/**
- * @Author:  
- * @DateTime: 2020/5/8
- * @Description: TODO
- */
 @AllArgsConstructor
 @Data
 @ToString

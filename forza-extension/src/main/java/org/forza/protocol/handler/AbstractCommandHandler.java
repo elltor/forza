@@ -17,11 +17,6 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/19
- * @Description: TODO
- */
 public abstract class AbstractCommandHandler<T extends RemotingCommand> implements CommandHandler<T> {
     private static final Logger logger = LoggerFactory.getLogger(AbstractCommandHandler.class);
     protected CommandFactory commandFactory;

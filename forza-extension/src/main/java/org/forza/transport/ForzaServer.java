@@ -21,14 +21,6 @@ import org.slf4j.LoggerFactory;
 
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
-
-/**
- * http
- *
- * @Author:  
- * @DateTime: 2020/4/17
- * @Description: TODO
- */
 public class ForzaServer extends AbstractServer<ForzaServer> {
     private static final Logger logger = LoggerFactory.getLogger(ForzaServer.class);
     private ServerBootstrap bootstrap;

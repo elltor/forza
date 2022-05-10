@@ -14,11 +14,6 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-/**
- * @Author:  
- * @DateTime: 2020/3/25
- * @Description: TODO
- */
 public class ExtensionLoader<T> {
     private static final Logger logger = LoggerFactory.getLogger(ExtensionLoader.class);
     private static final String SERVICE_DIRECTORY = "META-INF/services/";

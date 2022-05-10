@@ -2,10 +2,6 @@ package org.forza.config;
 
 /**
  * 配置
- *
- * @Author:  
- * @DateTime: 2020/4/10
- * @Description: TODO
  */
 public interface Configurable {
 

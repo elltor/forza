@@ -15,11 +15,6 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * @Author:  
- * @DateTime: 2020/5/5
- * @Description: TODO
- */
 public class ReconnectClient extends AbstractLifeCycle {
     private static final Logger logger = LoggerFactory.getLogger(ReconnectClient.class);
     private static final HashedWheelTimer IDLE_CHECK_TIMER = new HashedWheelTimer(

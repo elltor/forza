@@ -1,10 +1,5 @@
 package org.forza.common;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/18
- * @Description: TODO
- */
 public final class Version {
     // TODO fix
     public static final String DEFAULT_BOLT_PROTOCOL_VERSION = "1.0.0";

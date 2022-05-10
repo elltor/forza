@@ -17,11 +17,6 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * @Author:  
- * @DateTime: 2020/5/4
- * @Description: TODO
- */
 public class HeartbeatHandler extends AbstractCommandHandler {
     private static final Logger logger = LoggerFactory.getLogger(HeartbeatHandler.class);
     private Lock connectionLock = new ReentrantLock();

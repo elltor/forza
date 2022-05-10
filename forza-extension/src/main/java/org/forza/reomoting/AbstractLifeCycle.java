@@ -4,13 +4,6 @@ import org.forza.common.exception.LifeCycleException;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
-/**
- * 抽象生命周期
- *
- * @Author:  
- * @DateTime: 2020/3/18
- * @Description: TODO
- */
 public abstract class AbstractLifeCycle implements LifeCycle {
 
     private final AtomicBoolean isStarted = new AtomicBoolean(false);

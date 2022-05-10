@@ -15,11 +15,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/6
- * @Description: TODO
- */
 public class DecodeableInvocation extends Invocation implements Decdeable {
     private static final Logger logger = LoggerFactory.getLogger(DecodeableInvocation.class);
 

@@ -8,11 +8,6 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.util.concurrent.DefaultThreadFactory;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/15
- * @Description: TODO
- */
 public class ServerMock {
 
     public static void main(String[] args) throws InterruptedException {

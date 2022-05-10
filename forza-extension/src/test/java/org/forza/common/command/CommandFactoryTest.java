@@ -7,11 +7,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-/**
- * @Author:  ·
- * @DateTime: 2020/4/11
- * @Description: TODO
- */
 @RunWith(JUnit4.class)
 public class CommandFactoryTest {
 

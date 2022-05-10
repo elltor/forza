@@ -35,11 +35,6 @@ import java.util.concurrent.TimeUnit;
 
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/9
- * @Description: TODO
- */
 public class ForzaClient extends AbstractClient<InetSocketAddress, FixedChannelPool> {
     private static final Logger logger = LoggerFactory.getLogger(ForzaClient.class);
     private static final NioEventLoopGroup nioEventLoopGroup = new NioEventLoopGroup(Constants.DEFAULT_IO_THREADS, new DefaultThreadFactory("NettyClientWorker", true));

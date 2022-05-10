@@ -18,11 +18,6 @@ import org.junit.runners.JUnit4;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CountDownLatch;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/28
- * @Description: TODO
- */
 @RunWith(JUnit4.class)
 public class FutureCallbackTest {
 

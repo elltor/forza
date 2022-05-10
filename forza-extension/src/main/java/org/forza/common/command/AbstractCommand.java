@@ -1,14 +1,8 @@
 package org.forza.common.command;
 
-import lombok.Data;
 import org.forza.common.Invocation;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/6
- * @Description: TODO
- */
-@Data
+
 public abstract class AbstractCommand implements RemotingCommand {
     private int id;
     private CommandCode cmdCode;
@@ -42,5 +36,33 @@ public abstract class AbstractCommand implements RemotingCommand {
     @Override
     public int getId() {
         return this.id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setCmdCode(CommandCode cmdCode) {
+        this.cmdCode = cmdCode;
+    }
+
+    public boolean isHeartbeat() {
+        return heartbeat;
+    }
+
+    public void setHeartbeat(boolean heartbeat) {
+        this.heartbeat = heartbeat;
+    }
+
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    public void setInvocation(Invocation invocation) {
+        this.invocation = invocation;
     }
 }

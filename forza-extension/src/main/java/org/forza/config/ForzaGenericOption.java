@@ -2,11 +2,6 @@ package org.forza.config;
 
 import org.forza.common.Constants;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/10
- * @Description: TODO
- */
 public class ForzaGenericOption<T> extends ForzaOption<T> {
     public static final ForzaOption<Boolean> TCP_NODELAY = valueOf("bolt.tcp.nodelay",true);
     public static final ForzaOption<Boolean> TCP_SO_REUSEADDR = valueOf("bolt.tcp.so.reuseaddr",true);

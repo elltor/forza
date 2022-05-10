@@ -6,11 +6,6 @@ import org.forza.common.enums.CommandCodeEnum;
 import java.lang.reflect.ParameterizedType;
 import java.util.concurrent.ExecutorService;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/20
- * @Description: TODO
- */
 public abstract class AbstractUserProcessorAdapter<T> implements UserProcessor<T> {
 
     private ExecutorService executor;

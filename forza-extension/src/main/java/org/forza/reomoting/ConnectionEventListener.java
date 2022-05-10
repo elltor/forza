@@ -6,9 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * 连接事件监听器
- */
 public class ConnectionEventListener {
 
     /** 连接类型处理器 */

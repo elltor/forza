@@ -11,11 +11,6 @@ import org.junit.runners.JUnit4;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @Author:  
- * @DateTime: 2020/5/2
- * @Description: TODO
- */
 @RunWith(JUnit4.class)
 public class TimerTaskTest {
     private static final HashedWheelTimer IDLE_CHECK_TIMER = new HashedWheelTimer(

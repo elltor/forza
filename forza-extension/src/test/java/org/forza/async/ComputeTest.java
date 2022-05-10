@@ -9,11 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/8
- * @Description: TODO
- */
 @RunWith(JUnit4.class)
 public class ComputeTest {
     private ConcurrentHashMap<String, FutureTask<Connection>> connectionPool = new ConcurrentHashMap<String, FutureTask<Connection>>();

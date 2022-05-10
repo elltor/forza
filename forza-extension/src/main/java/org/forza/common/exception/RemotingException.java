@@ -4,11 +4,6 @@ import org.forza.reomoting.Connection;
 
 import java.net.InetSocketAddress;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/20
- * @Description: TODO
- */
 public class RemotingException extends RuntimeException {
 
     private static final long serialVersionUID = -6507663755035631766L;

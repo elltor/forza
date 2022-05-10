@@ -20,11 +20,6 @@ import org.forza.reomoting.Connection;
 
 import java.net.InetSocketAddress;
 
-/**
- * TimeoutException. (API, Prototype, ThreadSafe)
- *
- * @export
- */
 public class TimeoutException extends RemotingException {
 
     public static final int CLIENT_SIDE = 0;

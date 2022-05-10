@@ -6,7 +6,6 @@ import org.forza.transport.Client;
 import com.forza.sample.api.SimpleRequestBody;
 import com.forza.sample.api.SimpleResponseBody;
 import org.forza.autoconfigure.EnableForza;
-import org.openjdk.jmh.annotations.Benchmark;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -30,9 +29,9 @@ public class ForzaClientApplication {
         SpringApplication.run(ForzaClientApplication.class, args);
     }
 
-    @GetMapping("/test1")
+    @GetMapping("/test")
     public Object userCallTest() {
-        SimpleRequestBody requestBody = new SimpleRequestBody("criss", 25, 17731352346L);
+        SimpleRequestBody requestBody = new SimpleRequestBody("liuqichun", 2, 15136406316L);
         SimpleResponseBody responseBody = client.request(requestBody);
         logger.info("send data : {}, receive data : {}", requestBody.toString(), responseBody.toString());
         return Result.success(responseBody.toString());

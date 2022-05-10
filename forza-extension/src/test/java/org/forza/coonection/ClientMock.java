@@ -16,11 +16,6 @@ import io.netty.util.concurrent.FutureListener;
 
 import java.net.InetSocketAddress;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/15
- * @Description: TODO
- */
 public class ClientMock {
     private static SimpleChannelPoolMap poolMap;
 

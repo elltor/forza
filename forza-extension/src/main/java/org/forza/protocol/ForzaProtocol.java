@@ -10,11 +10,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @Author:  
- * @DateTime: 2020/4/4
- * @Description: TODO
- */
 public class ForzaProtocol implements Protocol {
     private final CommandHandlerManager cmdHandlerManager;
     private ExecutorService executor;

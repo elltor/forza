@@ -8,12 +8,6 @@ import org.forza.common.exception.RemotingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * 请求处理
- * @Author:  
- * @DateTime: 2020/4/24
- * @Description: TODO
- */
 public abstract class AbstractConnectionHandler implements ConnectionHandler {
     private static final Logger logger = LoggerFactory.getLogger(AbstractConnectionHandler.class);
 

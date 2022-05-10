@@ -2,11 +2,6 @@ package org.forza.config;
 
 import org.forza.common.Constants;
 
-/**
- * @Author:  
- * @DateTime: 2020/5/4
- * @Description: TODO
- */
 public class ForzaClientOption<T> extends ForzaRemotingOption<T> {
 
     public static final ForzaOption<String> HOST = valueOf(ForzaClientOption.class, "host", "127.0.0.1");

@@ -2,11 +2,7 @@ package org.forza.sample;
 
 import lombok.Data;
 
-/**
- * wrapper response data.
- *
- * @author liuqichun
- */
+
 @Data
 public class Result {
     private int code;

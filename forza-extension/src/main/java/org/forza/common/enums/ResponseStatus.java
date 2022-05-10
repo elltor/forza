@@ -16,15 +16,7 @@
  */
 package org.forza.common.enums;
 
-import lombok.AllArgsConstructor;
 
-/**
- * Status of the response.
- *
- * @author jiangping
- * @version $Id: ResponseStatus.java, v 0.1 2015-9-28 PM3:08:12 tao Exp $
- */
-@AllArgsConstructor
 public enum ResponseStatus {
     /** 0x65 */
     SUCCESS((byte) 101),
@@ -39,6 +31,10 @@ public enum ResponseStatus {
     UNKNOWN((byte) 111);
 
     private byte value;
+
+    ResponseStatus(byte value) {
+        this.value = value;
+    }
 
     public byte value() {
         return this.value;
