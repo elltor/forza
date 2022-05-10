@@ -1,9 +1,9 @@
 package org.forza.timertask;
 
-import org.forza.util.NamedThreadFactory;
 import io.netty.util.HashedWheelTimer;
 import io.netty.util.Timeout;
 import io.netty.util.TimerTask;
+import org.forza.util.NamedThreadFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;

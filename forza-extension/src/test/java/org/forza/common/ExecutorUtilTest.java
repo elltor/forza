@@ -1,6 +1,5 @@
 package org.forza.common;
 
-import lombok.SneakyThrows;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

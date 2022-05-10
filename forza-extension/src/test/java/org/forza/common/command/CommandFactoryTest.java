@@ -1,8 +1,8 @@
 package org.forza.common.command;
 
+import lombok.Getter;
 import org.forza.common.Invocation;
 import org.forza.common.enums.CommandCodeEnum;
-import lombok.Getter;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;

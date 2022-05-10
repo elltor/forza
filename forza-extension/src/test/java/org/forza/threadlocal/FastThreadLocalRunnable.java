@@ -1,7 +1,7 @@
 package org.forza.threadlocal;
 
-import org.forza.util.ObjectUtils;
 import io.netty.util.concurrent.FastThreadLocal;
+import org.forza.util.ObjectUtils;
 
 public class FastThreadLocalRunnable implements Runnable {
     private Runnable runnable;

@@ -1,7 +1,7 @@
 package org.forza.demo;
 
-import org.forza.config.ForzaClientOption;
 import org.forza.common.Url;
+import org.forza.config.ForzaClientOption;
 import org.forza.protocol.ReqBody;
 import org.forza.transport.ForzaClient;
 import org.junit.Before;

@@ -1,13 +1,12 @@
 package org.forza.util;
 
-import org.springframework.lang.Nullable;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
 public class ObjectUtils {
 
-    public static void isNotNull(@Nullable Object object, String message) {
+    public static void isNotNull(Object object, String message) {
         if (object == null) {
             throw new IllegalArgumentException(message);
         }

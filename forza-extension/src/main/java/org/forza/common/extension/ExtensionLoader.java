@@ -5,7 +5,6 @@ import org.forza.common.ClassHelper;
 import org.forza.common.Holder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.util.StringUtils;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -59,7 +58,7 @@ public class ExtensionLoader<T> {
      * @return
      */
     public T getExtension(String name) {
-        if (StringUtils.isEmpty(name)) {
+        if (name == null || name.isEmpty()) {
             throw new IllegalArgumentException("Extension name == null");
         }
         final Holder<T> holder = getOrCreateHolder(name);

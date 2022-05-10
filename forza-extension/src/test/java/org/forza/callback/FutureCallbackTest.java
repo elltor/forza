@@ -1,5 +1,7 @@
 package org.forza.callback;
 
+import io.netty.channel.Channel;
+import io.netty.channel.socket.nio.NioSocketChannel;
 import org.forza.common.Invocation;
 import org.forza.common.command.RequestCommand;
 import org.forza.common.command.ResponseCommand;
@@ -9,8 +11,6 @@ import org.forza.reomoting.Connection;
 import org.forza.reomoting.DefaultFuture;
 import org.forza.reomoting.FutureAdapter;
 import org.forza.reomoting.ResponseCallback;
-import io.netty.channel.Channel;
-import io.netty.channel.socket.nio.NioSocketChannel;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;

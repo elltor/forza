@@ -9,10 +9,10 @@ import org.forza.serialization.Serialization;
 import org.forza.serialization.SerializationManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.util.Assert;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 
 public class DecodeableInvocation extends Invocation implements Decdeable {
@@ -32,8 +32,8 @@ public class DecodeableInvocation extends Invocation implements Decdeable {
             AtomicIntegerFieldUpdater.newUpdater(DecodeableInvocation.class, "state");
 
     public DecodeableInvocation(AbstractCommand command, InputStream is, byte id) {
-        Assert.notNull(is, "inputStream == null");
-        Assert.notNull(command, "Command == null");
+        Objects.requireNonNull(is, "inputStream == null");
+        Objects.requireNonNull(command, "Command == null");
         this.command = command;
         this.inputStream = is;
         this.serializationType = id;

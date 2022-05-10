@@ -1,6 +1,5 @@
 package org.forza.coonection;
 
-import org.forza.coonection.pool.SimpleChannelPoolMap;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.buffer.Unpooled;
@@ -13,6 +12,7 @@ import io.netty.util.CharsetUtil;
 import io.netty.util.concurrent.DefaultThreadFactory;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.FutureListener;
+import org.forza.coonection.pool.SimpleChannelPoolMap;
 
 import java.net.InetSocketAddress;
 

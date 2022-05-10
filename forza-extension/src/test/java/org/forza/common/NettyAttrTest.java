@@ -1,10 +1,10 @@
 package org.forza.common;
 
-import org.forza.reomoting.Connection;
-import org.forza.util.CountDownLatchUtil;
 import io.netty.channel.Channel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.util.AttributeKey;
+import org.forza.reomoting.Connection;
+import org.forza.util.CountDownLatchUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
