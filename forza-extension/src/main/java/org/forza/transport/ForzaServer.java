@@ -44,7 +44,7 @@ public class ForzaServer extends AbstractServer<ForzaServer> {
         workerGroup = new NioEventLoopGroup(this.option(ForzaGenericOption.IO_THREADS),
                 new DefaultThreadFactory("BoltServerWorker", true));
         port = this.option(ForzaServerOption.PORT);
-        init(new Url(NetUtils.getLocalHost(), port));
+        initUrl(new Url(NetUtils.getLocalHost(), port));
         // 创建handler
         final ForzaHandler serverHandler = new ForzaHandler(getUrl(), getProtocol(), isServerSide());
         int idleTimeout = UrlUtils.getIdleTimeout(getUrl());

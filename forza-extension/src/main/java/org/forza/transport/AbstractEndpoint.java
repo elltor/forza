@@ -90,7 +90,7 @@ public abstract class AbstractEndpoint extends AbstractLifeCycle implements Endp
         return protocol;
     }
 
-    protected void init(Url url) {
+    protected void initUrl(Url url) {
         url.addParameters(options(ForzaRemotingOption.class));
         if (isServerSide()) {
             url.addParameters(options(ForzaServerOption.class));

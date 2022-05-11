@@ -91,7 +91,7 @@ public class ReconnectClient extends AbstractLifeCycle {
                 if (logger.isInfoEnabled()) {
                     logger.info("Reconnect to server count " + getReconnectCount() + ", client(url: " + url + ")");
                 }
-                client.ctreateConnectionIfAbsent(url);
+                client.createConnectionIfAbsent(url);
             } catch (Exception e) {
                 logger.warn(ObjectUtils.toString(e));
                 tasks.put(addReconnectCount());

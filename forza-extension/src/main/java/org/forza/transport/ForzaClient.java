@@ -57,7 +57,7 @@ public class ForzaClient extends AbstractClient<InetSocketAddress, FixedChannelP
                 this.option(ForzaClientOption.MAX_CONNECTION));
         Integer maxPendingAcquires = url.getParameter(Constants.MAX_PENDING_ACQUIRES,
                 this.option(ForzaClientOption.MAX_PENDING_ACQUIRES));
-        Boolean relaseHealthCheck = url.getParameter(Constants.RELEASE_HEALTH_CHECK,
+        Boolean releaseHealthCheck = url.getParameter(Constants.RELEASE_HEALTH_CHECK,
                 this.option(ForzaClientOption.RELEASE_HEALTH_CHECK));
         Boolean lastRecentUsed = url.getParameter(Constants.CONNECTION_LAST_RECENT_USED,
                 this.option(ForzaClientOption.CONNECTION_LAST_RECENT_USED));
@@ -95,7 +95,7 @@ public class ForzaClient extends AbstractClient<InetSocketAddress, FixedChannelP
                         .addLast(clientHandler);
             }
         }, ChannelHealthChecker.ACTIVE, timeoutAction, acquireTimeout,
-                maxConnection, maxPendingAcquires, relaseHealthCheck, lastRecentUsed);
+                maxConnection, maxPendingAcquires, releaseHealthCheck, lastRecentUsed);
     }
 
     @Override
@@ -109,36 +109,34 @@ public class ForzaClient extends AbstractClient<InetSocketAddress, FixedChannelP
                 .option(ChannelOption.WRITE_BUFFER_WATER_MARK, initWriteBufferWaterMark());
     }
 
-
     @Override
     protected void doClose() throws Throwable {
         nioEventLoopGroup.shutdownGracefully();
-
     }
 
     @Override
-    public Connection ctreateConnectionIfAbsent(Url url) throws RemotingException {
+    public Connection createConnectionIfAbsent(Url url) throws RemotingException {
         Channel ch = null;
         int connectTimeout = getConnectTimeout();
         bootstrap.option(ChannelOption.CONNECT_TIMEOUT_MILLIS, connectTimeout);
-        InetSocketAddress connectAddresss = getConnectAddresss();
-        FixedChannelPool channelPool = get(connectAddresss);
+        InetSocketAddress connectAddress = getConnectAddresss();
+        FixedChannelPool channelPool = get(connectAddress);
         try {
-            Long start = System.currentTimeMillis();
+            long start = System.currentTimeMillis();
             Future<io.netty.channel.Channel> future = channelPool.acquire();
             boolean ret = future.awaitUninterruptibly(connectTimeout, TimeUnit.MILLISECONDS);
             if (ret && future.isSuccess()) {
                 ch = future.getNow();
             } else if (future.cause() != null) {
                 String error = "client(url: " + url + ") failed to connect to server or from channelPool "
-                        + connectAddresss + ", error message is:" + future.cause().getMessage();
-                throw new RemotingException(null, connectAddresss, error, future.cause());
+                        + connectAddress + ", error message is:" + future.cause().getMessage();
+                throw new RemotingException(null, connectAddress, error, future.cause());
             } else {
                 String error = "client(url: " + url + ") failed to connect to server or from channelPool "
-                        + connectAddresss + " client-side timeout "
+                        + connectAddress + " client-side timeout "
                         + connectTimeout + "ms (elapsed: " + (System.currentTimeMillis() - start) + "ms) from netty client "
                         + NetUtils.getLocalHost();
-                throw new RemotingException(null, connectAddresss, error, future.cause());
+                throw new RemotingException(null, connectAddress, error, future.cause());
             }
         } finally {
             if (ch != null && ch.isActive()) {
@@ -146,7 +144,7 @@ public class ForzaClient extends AbstractClient<InetSocketAddress, FixedChannelP
                 releaseFuture.addListener(f -> {
                     if (f.cause() != null) {
                         String error = "client(url: " + url + ") failed to release to channelPool "
-                                + connectAddresss + ", error message is:" + f.cause().getMessage();
+                                + connectAddress + ", error message is:" + f.cause().getMessage();
                         logger.error(error);
                     }
                 });

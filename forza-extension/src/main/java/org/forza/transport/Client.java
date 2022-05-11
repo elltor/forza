@@ -6,7 +6,7 @@ import org.forza.reomoting.Connection;
 
 public interface Client extends Endpoint {
 
-    Connection ctreateConnectionIfAbsent(Url url) throws RemotingException;
+    Connection createConnectionIfAbsent(Url url) throws RemotingException;
 
     <T> T request(Url url, Object request) throws RemotingException;
 

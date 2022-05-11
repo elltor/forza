@@ -60,6 +60,7 @@ public abstract class AbstractClient<K, P extends ChannelPool>
         if (pool == null) {
             pool = newPool(key);
             P old = map.putIfAbsent(key, pool);
+            // 如果之前链接存在（old），则清除新建的
             if (old != null) {
                 // We need to destroy the newly created pool as we not use it.
                 poolCloseAsyncIfSupported(pool);
@@ -222,11 +223,11 @@ public abstract class AbstractClient<K, P extends ChannelPool>
 
     @Override
     public <T> T request(Url url, Object msg) throws RemotingException {
-        init(url);
+        initUrl(url);
         if (logger.isInfoEnabled()) {
             logger.info("request url: {}", url);
         }
-        Connection connection = ctreateConnectionIfAbsent(url);
+        Connection connection = createConnectionIfAbsent(url);
         RequestCommand request = commandFactory.createRequest(msg);
         if (UrlUtils.isOneway(url)) {
             connection.writeAndFlush(request);
