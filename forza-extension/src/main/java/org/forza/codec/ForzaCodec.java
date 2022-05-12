@@ -48,7 +48,7 @@ public class ForzaCodec extends AbstractCodec {
     @Override
     public void encode(Connection con, ChannelBuffer buffer, RemotingCommand cmd) throws EncoderException {
         if (cmd instanceof RequestCommand) {
-            encodeRequst(con, (RequestCommand) cmd, buffer);
+            encodeRequest(con, (RequestCommand) cmd, buffer);
         } else if (cmd instanceof ResponseCommand) {
             encodeResponse(con, (ResponseCommand) cmd, buffer);
         }
@@ -199,7 +199,7 @@ public class ForzaCodec extends AbstractCodec {
     }
 
     // TODO fix
-    private void encodeRequst(Connection con, RequestCommand req, ChannelBuffer buffer) throws EncoderException {
+    private void encodeRequest(Connection con, RequestCommand req, ChannelBuffer buffer) throws EncoderException {
         try {
             Serialization serialization = SerializationManager.getSerialization(con.getUrl());
             byte[] header = new byte[HEADER_LENGTH];

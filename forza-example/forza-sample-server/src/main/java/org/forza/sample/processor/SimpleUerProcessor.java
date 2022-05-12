@@ -8,11 +8,7 @@ import org.forza.protocol.processor.AbstractUserProcessorAdapter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * @Author:  
- * @DateTime: 2020/5/8
- * @Description: TODO
- */
+
 public class SimpleUerProcessor extends AbstractUserProcessorAdapter<SimpleRequestBody> {
     private static final Logger logger = LoggerFactory.getLogger(SimpleUerProcessor.class);
 
