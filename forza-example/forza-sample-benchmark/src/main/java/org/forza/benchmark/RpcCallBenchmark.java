@@ -42,12 +42,12 @@ RpcCallBenchmark.benchmark_50k      avgt    1.939       ms/op
  */
 
 @BenchmarkMode({Mode.Throughput, Mode.AverageTime})
-@Warmup(iterations = 2, time = 2)
-@Measurement(iterations = 1, time = 10)
+@Warmup(iterations = 1, time = 2)
+@Measurement(iterations = 1, time = 5)
 @Threads(4)
 @Fork(1)
 @State(value = Scope.Benchmark)
-@OutputTimeUnit(TimeUnit.MILLISECONDS)
+@OutputTimeUnit(TimeUnit.SECONDS)
 public class RpcCallBenchmark {
 
     private EndpointProvider endpointProvider;

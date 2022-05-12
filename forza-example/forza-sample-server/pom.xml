@@ -10,16 +10,46 @@
         <version>${revision}</version>
     </parent>
 
+    <packaging>jar</packaging>
+
     <artifactId>forza-sample-server</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>org.forza</groupId>
-            <artifactId>forza-sample-api</artifactId>
-        </dependency>
+        <!-- 引入 Forza RPC 的依赖 -->
         <dependency>
             <groupId>org.forza</groupId>
             <artifactId>forza-spring-boot-starter</artifactId>
         </dependency>
+
+        <!-- 引入共同的API, POJO、Request、Response -->
+        <dependency>
+            <groupId>org.forza</groupId>
+            <artifactId>forza-sample-api</artifactId>
+        </dependency>
+
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <includeSystemScope>true</includeSystemScope>
+                    <mainClass>org.forza.sample.ForzaServerApplication</mainClass>
+                </configuration>
+
+            </plugin>
+        </plugins>
+    </build>
+
+
 </project>

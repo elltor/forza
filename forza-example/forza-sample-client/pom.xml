@@ -13,28 +13,22 @@
     <artifactId>forza-sample-client</artifactId>
 
     <dependencies>
+        <!-- 引入 Forza RPC 的依赖 -->
         <dependency>
             <groupId>org.forza</groupId>
             <artifactId>forza-spring-boot-starter</artifactId>
         </dependency>
+
+        <!-- 引入共同的API, POJO、Request、Response -->
         <dependency>
             <groupId>org.forza</groupId>
             <artifactId>forza-sample-api</artifactId>
         </dependency>
+
+        <!-- spring boot 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <!-- JMH 基准测试 -->
-        <dependency>
-            <groupId>org.openjdk.jmh</groupId>
-            <artifactId>jmh-core</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.openjdk.jmh</groupId>
-            <artifactId>jmh-generator-annprocess</artifactId>
         </dependency>
     </dependencies>
 

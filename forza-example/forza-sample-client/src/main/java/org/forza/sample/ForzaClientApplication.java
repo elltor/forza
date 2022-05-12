@@ -29,7 +29,7 @@ public class ForzaClientApplication {
         SpringApplication.run(ForzaClientApplication.class, args);
     }
 
-    @GetMapping("/test")
+    @GetMapping("/test1")
     public Object userCallTest() {
         SimpleRequestBody requestBody = new SimpleRequestBody("liuqichun", 2, 15136406316L);
         SimpleResponseBody responseBody = client.request(requestBody);
@@ -45,19 +45,9 @@ public class ForzaClientApplication {
         return Result.success(goodsResponseBody.toString());
     }
 
-    @GetMapping("/test3")
-    public Object test3() {
-        return Result.success("OK");
-    }
-
-    @GetMapping("/test4")
-    public Object test4() {
-        return Result.success("OK");
-    }
-
     @GetMapping("/")
     public Object test5() {
-        return Result.success("/test1,/test2,/test3,/test4...");
+        return Result.success("请测试：/test1、/test2");
     }
 
 }

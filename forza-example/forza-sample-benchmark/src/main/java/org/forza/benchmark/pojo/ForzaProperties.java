@@ -6,6 +6,7 @@ import org.forza.common.Constants;
 
 @Data
 public class ForzaProperties {
+
     private Client client = new Client();
     private Server server = new Server();
 
@@ -32,7 +33,9 @@ public class ForzaProperties {
     public static class Client {
         /** 启动client */
         private boolean enabled = false;
-        private String host = "127.0.0.1";
+        /* 要连接的服务器地址 本地：127.0.0.1 远程：elltor.com */
+        private String host = "elltor.com";
+        /** 服务端暴露的端口 */
         private int port = 8091;
         /** 连接超时 */
         private int connectTimeout = 3000;
@@ -41,7 +44,6 @@ public class ForzaProperties {
         private int heartbeatInterval = 15 * 1000;
         /** 最大连接数 */
         private int maxConnection = 1;
-        /**  */
         private int maxPendingAcquires = Integer.MAX_VALUE;
         /** 请求超时时间 */
         private long acquireTimeout = 3000;
@@ -51,12 +53,12 @@ public class ForzaProperties {
         private boolean lastRecentUsed = false;
         /** 是否心跳检测 */
         private boolean healthCheck = true;
-
     }
 
     @Data
     public static class Server {
         private boolean enabled = false;
+        /** 服务端默认端口 */
         private int port = 8091;
     }
 

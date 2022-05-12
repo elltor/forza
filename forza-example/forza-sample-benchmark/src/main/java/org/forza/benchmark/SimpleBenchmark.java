@@ -9,11 +9,11 @@ import java.util.concurrent.TimeUnit;
 
 @BenchmarkMode({Mode.Throughput})
 @Warmup(iterations = 1, time = 2)
-@Measurement(iterations = 1, time = 2)
+@Measurement(iterations = 1, time = 3)
 @Threads(4)
 @Fork(1)
 @State(value = Scope.Benchmark)
-@OutputTimeUnit(TimeUnit.MILLISECONDS)
+@OutputTimeUnit(TimeUnit.SECONDS)
 public class SimpleBenchmark {
 
     int cnt;
