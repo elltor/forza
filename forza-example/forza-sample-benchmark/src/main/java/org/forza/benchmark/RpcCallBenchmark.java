@@ -1,14 +1,19 @@
 package org.forza.benchmark;
 
 import com.forza.sample.api.SimpleRequestBody;
+import com.forza.sample.api.SimpleResponseBody;
 import org.forza.transport.Client;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -43,8 +48,8 @@ RpcCallBenchmark.benchmark_50k      avgt    1.939       ms/op
 
 @BenchmarkMode({Mode.Throughput, Mode.AverageTime})
 @Warmup(iterations = 1, time = 2)
-@Measurement(iterations = 1, time = 5)
-@Threads(4)
+@Measurement(iterations = 1, time = 3)
+@Threads(2)
 @Fork(1)
 @State(value = Scope.Benchmark)
 @OutputTimeUnit(TimeUnit.SECONDS)
@@ -77,26 +82,34 @@ public class RpcCallBenchmark {
     @Benchmark
     public void benchmark_null() {
         SimpleRequestBody requestBody = new SimpleRequestBody(null, 0, 0L);
-        client.request(requestBody);
+        try{
+            client.request(requestBody);
+        }catch (Exception e){}
     }
 
     @Benchmark
     public void benchmark_1k() {
         SimpleRequestBody requestBody = new SimpleRequestBody(str_1k, 0, 0L);
-        client.request(requestBody);
+        try{
+            client.request(requestBody);
+        }catch (Exception e){}
     }
 
-    @Benchmark
+    /*@Benchmark
     public void benchmark_10k() {
         SimpleRequestBody requestBody = new SimpleRequestBody(str_10k, 0, 0L);
-        client.request(requestBody);
+        try{
+            client.request(requestBody);
+        }catch (Exception e){}
     }
 
     @Benchmark
     public void benchmark_50k() {
-        SimpleRequestBody requestBody = new SimpleRequestBody(str_10k, 0, 0L);
-        client.request(requestBody);
-    }
+        SimpleRequestBody requestBody = new SimpleRequestBody(str_50k, 0, 0L);
+        try{
+            client.request(requestBody);
+        }catch (Exception e){}
+    }*/
 
     public static void main(String[] args) throws RunnerException {
         Options options = new OptionsBuilder()

@@ -39,18 +39,18 @@ public class ForzaProperties {
         private int port = 8091;
         /** 连接超时 */
         private int connectTimeout = 3000;
-        private int timeout =3000;
+        private int timeout =10_000;
         /** 心跳检测间隔 */
         private int heartbeatInterval = 15 * 1000;
         /** 最大连接数 */
         private int maxConnection = 1;
         private int maxPendingAcquires = Integer.MAX_VALUE;
         /** 请求超时时间 */
-        private long acquireTimeout = 3000;
+        private long acquireTimeout = 10_000;
         /** 请求超时操作 */
         private String acquireTimeoutAction = "new";
         /** LRU */
-        private boolean lastRecentUsed = false;
+        private boolean lastRecentUsed = true;
         /** 是否心跳检测 */
         private boolean healthCheck = true;
     }
