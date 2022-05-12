@@ -33,7 +33,7 @@ public class ForzaProperties {
     public static class Client {
         /** 启动client */
         private boolean enabled = false;
-        /* 要连接的服务器地址 本地：127.0.0.1 远程：elltor.com */
+        /** 要连接的服务器地址 本地：127.0.0.1 远程：elltor.com */
         private String host = "elltor.com";
         /** 服务端暴露的端口 */
         private int port = 8091;
