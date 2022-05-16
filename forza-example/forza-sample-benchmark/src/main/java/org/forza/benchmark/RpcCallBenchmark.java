@@ -1,19 +1,14 @@
 package org.forza.benchmark;
 
 import com.forza.sample.api.SimpleRequestBody;
-import com.forza.sample.api.SimpleResponseBody;
 import org.forza.transport.Client;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -109,6 +104,7 @@ public class RpcCallBenchmark {
         try{
             client.request(requestBody);
         }catch (Exception e){}
+
     }*/
 
     public static void main(String[] args) throws RunnerException {
